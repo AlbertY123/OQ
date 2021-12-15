@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>OQ</title>
+  </head>
+  <body>
+    <h1>OQ</h1>
+    <h2>About</h2>
+    <p>There is such a think as IQ, and EQ, So why not OQ? IQ stands for intellegence quotinent, EQ stands for emotion quotinent. So OQ stands for outdoor
+        quotinent.
+    </p>
+    <h2>How IQ works</h2>
+    <p>To cauculate a persons iq, the average intellegence of a person is messured, if your iq equals to the average iq of a person, 
+        then your iq would be 100. 
+    </p>
+    <h2>How OQ will work</h2>
+    <p>The Average OQ of a group is going to be 100. In this case, the average is going to be me.</p>
+    <div>   
+        <textarea id="OQ_Show" disabled="disabled"
+            style="resize: none; font: 'Courier-New'; font-size : 12pt; height: 60px; width: 100px; 
+            background-color: rgb(184, 240, 184); border: 2px solid black;">
+        </textarea>
+    </div>
+
+
+    <p>
+        <script type="text/JavaScript">
+            var OQ = 0;
+            document.getElementById("OQ_Show").innerHTML = "Your OQ is " + OQ;
+            //Basic machanics of the game.
+            function play(){
+                user_guess = document.getElementById("guessinput").value
+                if(user_guess == 2){
+                    OQ = 100
+                    document.getElementById("OQ_Show").innerHTML = "Your OQ is " + OQ;
+                }
+                if(user_guess > 2){
+                    var cauculation = user_guess-2 
+                    OQ = cauculation*10 + 100
+                    document.getElementById("OQ_Show").innerHTML = "Your OQ is " + OQ;
+                }
+                if(user_guess < 2){
+                    var cauculation = user_guess-2
+                    OQ = cauculation*10 + 100
+                    document.getElementById("OQ_Show").innerHTML = "Your OQ is " + OQ;
+                }
+            }
+        </script>
+        <div class="alert alert-warning" role="alert" id="msg_warning" style="display:none">
+            Bad input, retry
+        </div>
+        <form id="guess_form">
+            <div class="form-group">
+                <label for="guessinput">How Much hours of Outdoor time do you spend A day?</label>
+                `   <input type="number" class="form-control" id="guessinput" placeholder="The answer is...">
+                <small id="guesshelp" class="form-text text-muted">Please answer the question.</small>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="play()">Submit</button>
+        </form>
+
+    </p>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
